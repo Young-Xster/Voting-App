@@ -1,0 +1,485 @@
+.room-container {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.room-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.room-header h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.room-code {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.room-code span {
+  font-weight: 600;
+  font-family: 'Inter', monospace;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.copy-button {
+  background: white;
+  color: #667eea;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.room-theme {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.room-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Collection Phase */
+.collection-phase {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.collection-phase h2 {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.collection-phase form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.collection-phase input {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.collection-phase input:focus {
+  border-color: #667eea;
+}
+
+.collection-phase button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.collection-phase button:hover {
+  transform: translateY(-2px);
+}
+
+.already-submitted {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.already-submitted p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.entries-list h3 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.entries-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.entries-list li {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s;
+}
+
+.entries-list li:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.entry-content {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.entry-author {
+  font-size: 0.9rem;
+  color: #666;
+  background: #e9ecef;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.start-voting-button {
+  width: 100%;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.start-voting-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Voting Phase */
+.voting-phase {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.voting-phase h2 {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 3rem 0;
+}
+
+.already-voted {
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.already-voted p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.voting-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.voting-option {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.entry-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid #e9ecef;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.entry-card:hover {
+  border-color: #667eea;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.entry-card p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.voting-option button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.voting-option button:hover {
+  transform: translateY(-2px);
+}
+
+.voting-tally {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.voting-tally h3 {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.voting-tally ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.voting-tally li {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 2px solid #e9ecef;
+  font-weight: 600;
+  color: #333;
+}
+
+.voting-progress {
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.voting-progress p {
+  margin: 0;
+  font-weight: 600;
+  color: #667eea;
+}
+
+.next-button {
+  padding: 1.5rem 3rem;
+  background: linear-gradient(135deg, #fd7e14, #e68900);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.next-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.next-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Completed Phase */
+.completed-phase {
+  background: white;
+  border-radius: 20px;
+  padding: 4rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.completed-phase h2 {
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 3rem 0;
+}
+
+.winner-card {
+  background: linear-gradient(135deg, #ffd93d, #ffb74d);
+  padding: 3rem;
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 500px;
+  border: 3px solid #ff8f00;
+}
+
+.winner-content {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.winner-author {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.new-vote-button {
+  padding: 1.5rem 3rem;
+  margin-top: 2rem;
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.new-vote-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Room Footer */
+.room-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.participants {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex: 1;
+}
+
+.participants h3 {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.participants ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.participants li {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.leave-room-button {
+  background: linear-gradient(135deg, #e53e3e, #c53030);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+  white-space: nowrap;
+}
+
+.leave-room-button:hover {
+  transform: translateY(-2px);
+}
+
+.loading {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .room-container {
+    padding: 1rem;
+  }
+  
+  .voting-pair {
+    grid-template-columns: 1fr;
+  }
+  
+  .room-footer {
+    flex-direction: column;
+  }
+  
+  .collection-phase form {
+    flex-direction: column;
+  }
+}
