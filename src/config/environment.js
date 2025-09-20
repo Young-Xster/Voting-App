@@ -3,7 +3,7 @@ const config = {
     SERVER_URL: 'http://localhost:8090'
   },
   production: {
-    SERVER_URL: import.meta.env.VITE_SERVER_URL || 'https://your-app-name.up.railway.app'
+    SERVER_URL: import.meta.env.VITE_SERVER_URL || 'https://voting-app-server-production.up.railway.app'
   }
 }
 
