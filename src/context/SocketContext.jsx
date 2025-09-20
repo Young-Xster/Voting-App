@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { io } from "socket.io-client";
+import config from "../config/environment.js";
 
 const SocketContext = createContext(null);
 
@@ -17,7 +18,7 @@ export const SocketProvider = ({ children }) => {
   const [roomState, setRoomState] = useState(null);
 
   useEffect(() => {
-    const socketInstance = io("http://localhost:8090");
+    const socketInstance = io(config.SERVER_URL);
 
     socketInstance.on("connect", () => {
       console.log("Connected to server");

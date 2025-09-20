@@ -29,7 +29,7 @@
 
 .room-code span {
   font-weight: 600;
-  font-family: 'Inter', monospace;
+  font-family: "Inter", monospace;
   font-size: 1.2rem;
   color: white;
 }
@@ -470,15 +470,15 @@
   .room-container {
     padding: 1rem;
   }
-  
+
   .voting-pair {
     grid-template-columns: 1fr;
   }
-  
+
   .room-footer {
     flex-direction: column;
   }
-  
+
   .collection-phase form {
     flex-direction: column;
   }
