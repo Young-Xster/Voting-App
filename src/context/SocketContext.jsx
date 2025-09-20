@@ -21,23 +21,24 @@ export const SocketProvider = ({ children }) => {
     const socketInstance = io(config.SERVER_URL);
 
     socketInstance.on("connect", () => {
-      console.log("Connected to server");
       setConnected(true);
     });
 
     socketInstance.on("disconnect", () => {
-      console.log("Disconnected from server");
       setConnected(false);
     });
 
     socketInstance.on("state", (state) => {
-      console.log("Received state:", state);
       setRoomState(state);
     });
 
     socketInstance.on("error", (error) => {
       console.error("Socket error:", error);
       alert(error.message);
+    });
+
+    socketInstance.on("connect_error", (error) => {
+      console.error("Connection error:", error);
     });
 
     setSocket(socketInstance);
@@ -48,11 +49,25 @@ export const SocketProvider = ({ children }) => {
   }, []);
 
   const createRoom = (userName, roomName, theme) => {
-    socket?.emit("createRoom", { username: userName, roomName, theme });
+    if (!socket || !connected) {
+      return Promise.reject(new Error("Not connected to server"));
+    }
 
-    return new Promise((resolve) => {
-      socket?.once("roomCreated", ({ roomId }) => {
+    socket.emit("createRoom", { username: userName, roomName, theme });
+
+    return new Promise((resolve, reject) => {
+      const timeout = setTimeout(() => {
+        reject(new Error("Room creation timed out"));
+      }, 10000); // 10 second timeout
+
+      socket.once("roomCreated", ({ roomId }) => {
+        clearTimeout(timeout);
         resolve(roomId);
+      });
+
+      socket.once("error", (error) => {
+        clearTimeout(timeout);
+        reject(new Error(error.message || "Failed to create room"));
       });
     });
   };

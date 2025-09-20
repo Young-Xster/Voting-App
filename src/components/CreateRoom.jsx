@@ -22,7 +22,7 @@ const CreateRoom = ({ userName }) => {
         );
         navigate(`/room/${roomId}`);
       } catch (error) {
-        console.error("Error creating room:", error);
+        alert("Error creating room: " + error.message);
       } finally {
         setIsLoading(false);
       }
