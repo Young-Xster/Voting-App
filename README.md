@@ -18,24 +18,28 @@
 ## ✨ Features
 
 ### 🎨 **Modern Design**
+
 - **Purple gradient background** with glass-morphism effects
 - **Card-based UI** with smooth animations and hover effects
 - **Responsive design** that works perfectly on desktop and mobile
 - **Interactive elements** with beautiful transitions and feedback
 
 ### 🔄 **Real-time Functionality**
+
 - **Live voting** with instant updates across all participants
 - **Room management** with unique room codes for easy sharing
 - **Participant tracking** with real-time user list
 - **Tournament-style elimination** voting system
 
 ### 🏆 **Voting System**
+
 - **Entry collection phase** - Users submit their ideas/options
 - **Head-to-head voting** - Participants vote between pairs
 - **Winner determination** - Beautiful celebration of the final winner
 - **Multiple rounds** support for comprehensive tournaments
 
 ### 👥 **Multi-user Support**
+
 - **Room creation** with custom themes (movies, songs, games, etc.)
 - **Easy joining** with simple room codes
 - **Creator controls** for managing voting phases
@@ -46,6 +50,7 @@
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **React 19** - Modern React with hooks and context
 - **Vite** - Lightning-fast build tool and dev server
 - **React Router** - Client-side routing for SPA navigation
@@ -53,6 +58,7 @@
 - **Modern CSS** - Custom styling with gradients, animations, and responsive design
 
 ### Backend
+
 - **Node.js** - JavaScript runtime for server-side logic
 - **Express.js** - Web application framework
 - **Socket.IO** - Real-time bidirectional event-based communication
@@ -64,21 +70,25 @@
 ## 🚀 Installation
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm or yarn package manager
 
 ### 1. Clone the Repository
+
 ```bash
 git clone git@github.com:Young-Xster/Voting-App.git
 cd Voting-App
 ```
 
 ### 2. Install Frontend Dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Install Backend Dependencies
+
 ```bash
 cd voting-server
 npm install
@@ -88,16 +98,20 @@ cd ..
 ### 4. Start the Application
 
 #### Start the Backend Server
+
 ```bash
 cd voting-server
 npm start
 ```
+
 The server will start on `http://localhost:8090`
 
 #### Start the Frontend (in a new terminal)
+
 ```bash
 npm run dev
 ```
+
 The app will be available at `http://localhost:5173`
 
 ---
@@ -105,17 +119,20 @@ The app will be available at `http://localhost:5173`
 ## 🎮 How to Use
 
 ### Creating a Room
+
 1. **Enter your name** on the homepage
-2. **Click "Create Room"** 
+2. **Click "Create Room"**
 3. **Fill in room details** (name and theme)
 4. **Share the room code** with participants
 
 ### Joining a Room
+
 1. **Enter your name** on the homepage
 2. **Click "Join Room"**
 3. **Enter the room code** provided by the room creator
 
 ### Voting Process
+
 1. **Submit entries** - All participants add their suggestions
 2. **Vote on pairs** - Head-to-head voting on random pairs
 3. **See the winner** - Celebrate the final winner!
@@ -152,11 +169,13 @@ voting-app/
 ## 🎨 Design Highlights
 
 ### Color Palette
+
 - **Primary**: Purple gradient (`#667eea` → `#764ba2`)
 - **Secondary**: Various accent colors for different elements
 - **Background**: Dynamic gradient with glass-morphism effects
 
 ### UI Components
+
 - **Glass cards** with backdrop blur effects
 - **Smooth animations** on hover and interactions
 - **Gradient buttons** with lift effects
@@ -167,6 +186,7 @@ voting-app/
 ## 🔧 Available Scripts
 
 ### Frontend
+
 ```bash
 npm run dev          # Start development server
 npm run build        # Build for production
@@ -175,6 +195,7 @@ npm run lint         # Run ESLint
 ```
 
 ### Backend
+
 ```bash
 npm start            # Start the server
 npm test             # Run tests
@@ -184,7 +205,7 @@ npm test             # Run tests
 
 ## 🌟 Screenshots
 
-*Coming soon - Add screenshots of your beautiful app in action!*
+_Coming soon - Add screenshots of your beautiful app in action!_
 
 ---
 
@@ -193,6 +214,7 @@ npm test             # Run tests
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
 ### Development Setup
+
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
@@ -210,6 +232,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👨‍💻 Author
 
 **Young-Xster**
+
 - GitHub: [@Young-Xster](https://github.com/Young-Xster)
 
 ---
